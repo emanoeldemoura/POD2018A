@@ -105,14 +105,12 @@ void realizar_merge(string entrada, int n_arquivos, int tamanho_arq){
           //Salvar se Buffer cheio.
           if(quantidade_buffer==tamanho_arq){
              //Insere no buffer de saida.
-             //salva_arquivo("saida.txt",buffer,tamanho_arq,1);
              salva_arquivo(const_cast<char*>("saida.txt"),buffer,tamanho_arq,1);
              quantidade_buffer = 0;
           }
      }
 
      if(quantidade_buffer>0){
-         //salva_arquivo("saida.txt",buffer,quantidade_buffer,1);
          salva_arquivo(temp,buffer,quantidade_buffer,1);
      }
 }
